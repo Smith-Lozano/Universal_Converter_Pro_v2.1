@@ -1,0 +1,176 @@
+LEEME - Universal Converter Pro v2.1
+=====================================
+
+DESCRIPCIÓN GENERAL
+-------------------
+Universal Converter Pro v2.1 es una aplicación de escritorio desarrollada en 
+Python con PySide6 que permite realizar conversiones entre múltiples unidades 
+de medida en diferentes categorías. La aplicación cuenta con una interfaz 
+moderna con tema oscuro y funcionalidades avanzadas como calculadora eléctrica 
+integrada.
+
+CARACTERÍSTICAS PRINCIPALES
+---------------------------
+
+CATEGORÍAS DE CONVERSIÓN DISPONIBLES:
+1. ⏰  Tiempo - Nanosegundos a siglos
+2. 📏  Longitud - Milímetros a millas náuticas
+3. ⚖️  Masa/Peso - Miligramos a quintales
+4. 🌡️  Temperatura - Celsius, Fahrenheit, Kelvin
+5. 🔋  Energía - Julios, calorías, kWh, BTU
+6. ⚡  Potencia - Vatios, caballos de fuerza
+7. 🔌  Electricidad - Con calculadora de Ley de Ohm
+8. 💾  Almacenamiento - Bits, bytes, GB, TB (sistema decimal y binario)
+9. 🚀  Velocidad de Datos - Mbps, Gbps, MB/s
+10. 🚗 Velocidad - m/s, km/h, millas/hora, Mach
+11. 📐 Geometría - Área y volumen
+
+FUNCIONALIDADES ESPECIALES:
+- Interfaz oscura profesional con diseño moderno
+- Sistema de historial de conversiones recientes
+- Validación inteligente de entrada de datos
+- Formateo automático de números (notación científica cuando es necesario)
+- Calculadora eléctrica integrada para conversiones complejas usando Ley de Ohm
+- Compatibilidad con formatos numéricos (punto o coma decimal)
+
+REQUISITOS DEL SISTEMA
+----------------------
+
+DEPENDENCIAS:
+- Python 3.8 o superior
+- PySide6
+
+INSTALACIÓN DE DEPENDENCIAS:
+pip install PySide6
+
+INSTRUCCIONES DE USO
+--------------------
+
+INICIAR LA APLICACIÓN:
+python Universal_Converter_Pro_v2.1.py
+
+PASOS PARA CONVERTIR:
+1. Seleccionar categoría usando los botones de radio
+2. Ingresar valor numérico en el campo de entrada
+3. Seleccionar unidad de origen en el primer desplegable
+4. Seleccionar unidad de destino en el segundo desplegable
+5. Hacer clic en "CONVERTIR" o presionar Enter
+
+FUNCIONAMIENTO DE LA CALCULADORA ELÉCTRICA:
+Cuando se intenta convertir entre unidades eléctricas diferentes (V, A, Ω, W), 
+se abrirá automáticamente una calculadora especial que requiere al menos 2 
+valores conocidos para calcular los demás usando la Ley de Ohm.
+
+LIMPIEZA:
+- Usar el botón "🗑️ LIMPIAR" para borrar todos los campos
+- El historial muestra las últimas 8 conversiones
+
+ESTRUCTURA DEL CÓDIGO
+---------------------
+
+CLASES PRINCIPALES:
+- ConverterApp: Clase principal de la aplicación
+  - __init__(): Configuración inicial y estilo
+  - initUI(): Construcción de la interfaz gráfica
+  - convert(): Función principal de conversión
+  - Métodos específicos por categoría: convert_time(), convert_length(), etc.
+
+MÉTODOS DE CONVERSIÓN:
+Cada categoría tiene su propio método de conversión que implementa las 
+fórmulas matemáticas necesarias para convertir entre unidades.
+
+SISTEMA DE CALCULADORA ELÉCTRICA:
+- show_electricity_calculator(): Muestra diálogo interactivo
+- calculate_ohm_law(): Implementa cálculos de Ley de Ohm
+- is_complex_electric_conversion(): Detecta conversiones que requieren calculadora
+
+FORMATOS DE ENTRADA ACEPTADOS
+------------------------------
+
+NÚMEROS:
+- Decimales con punto: 123.45
+- Decimales con coma: 123,45
+- Notación científica: 1.23e4 o 1,23e4
+- Números enteros: 1000
+
+VALIDACIONES:
+- Solo se aceptan valores numéricos válidos
+- Se rechazan textos y caracteres no numéricos
+- Los campos vacíos muestran advertencia
+
+PERSONALIZACIÓN
+---------------
+
+ESTILOS:
+La aplicación utiliza QSS (Qt Style Sheets) para personalización completa. 
+Los colores y estilos pueden modificarse en el método setStyleSheet().
+
+AGREGAR NUEVAS CATEGORÍAS:
+1. Agregar botón en initUI() en el diccionario categories
+2. Añadir unidades en get_units_for_category()
+3. Implementar método de conversión específico
+
+MENSAJES DE ERROR
+-----------------
+
+ERRORES COMUNES:
+- "Por favor ingrese un valor": Campo de entrada vacío
+- "No se pudo interpretar como número": Formato inválido
+- "No se puede convertir de X a Y": Conversión no soportada
+- "Se necesitan al menos 2 valores": En calculadora eléctrica
+
+CARACTERÍSTICAS TÉCNICAS
+------------------------
+
+VENTAJAS:
+- Código modular y fácil de extender
+- Interfaz responsiva con área de desplazamiento
+- Manejo robusto de errores
+- Compatible con múltiples sistemas operativos
+- Sin dependencias externas aparte de PySide6
+
+PRECISIÓN:
+- Usa precisión de doble punto flotante
+- Formatea automáticamente números grandes/pequeños
+- Mantiene precisión significativa según el contexto
+
+SOLUCIÓN DE PROBLEMAS
+---------------------
+
+PROBLEMAS COMUNES:
+
+1. La aplicación no inicia:
+   - Verificar que PySide6 esté instalado
+   - Comprobar versión de Python (3.8+)
+   - Verificar permisos de ejecución
+
+2. Las conversiones no funcionan:
+   - Revisar formato de entrada numérica
+   - Verificar que se haya seleccionado categoría
+   - Comprobar que las unidades sean compatibles
+
+3. Interfaz gráfica distorsionada:
+   - Verificar resolución de pantalla
+   - Revisar configuración de escalado del sistema
+
+SOPORTE:
+Para reportar bugs o sugerir mejoras, contactar al desarrollador: Smith Lozano
+
+LICENCIA Y CRÉDITOS
+-------------------
+
+LICENCIA:
+Aplicación de uso libre para fines educativos y personales.
+
+DESARROLLADOR:
+- Nombre: Smith Lozano
+- Versión: 2.1
+- Tecnologías: Python, PySide6, Qt
+
+HISTORIAL DE VERSIONES:
+- v2.1: Calculadora eléctrica mejorada, interfaz optimizada
+- v2.0: Múltiples categorías, tema oscuro profesional
+- v1.0: Conversor básico de unidades
+
+---
+¡Disfruta convirtiendo unidades con Universal Converter Pro v2.1! 🚀

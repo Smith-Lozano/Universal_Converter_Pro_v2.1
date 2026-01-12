@@ -1,0 +1,35 @@
+# version_info.txt
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(2, 1, 0, 0),
+    prodvers=(2, 1, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          '040904B0',
+          [
+            StringStruct('CompanyName', 'by Smith'),
+            StringStruct('FileDescription', 'Universal Converter Pro v2.1'),
+            StringStruct('FileVersion', '2.1.0.0'),
+            StringStruct('InternalName', 'UniversalConverterProv2.1'),
+            StringStruct('LegalCopyright', '© 2026 Smith Lozano. Todos los derechos reservados.'),
+            StringStruct('OriginalFilename', 'UniversalConverterProv2.1.exe'),
+            StringStruct('ProductName', 'UniversalConverterProv2.1'),
+            StringStruct('ProductVersion', '2.1.0.0'),
+            StringStruct('Comments', 'Herramienta profesional de conversión de unidades'),
+            StringStruct('LegalTrademarks', 'Universal Converter Pro v2.1 - software libre'),
+          ]
+        )
+      ]
+    ),
+    VarFileInfo([VarStruct('Translation', [1034, 1200])])
+  ]
+)
